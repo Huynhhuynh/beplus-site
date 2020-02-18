@@ -1,0 +1,114 @@
+header.main-header {
+    box-shadow: 0 2px 4px rgba(3,27,78,.1);
+
+    .header-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px 0;
+    }
+}
+
+.site-brand {
+    margin-right: 45px;
+}
+
+.site-navigation {
+
+    ul.menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+
+            a {
+                color: $link-color;
+                font-family: $heading-font;
+                font-weight: 400;
+            }
+
+            &:hover {
+
+                > a {
+                    color: $accent-color;
+                }
+            }
+
+            > a.nuxt-link-exact-active {
+                color: $accent-color;
+            }
+        }
+
+        > li {
+
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+.site-tools {
+    margin-left: auto;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        li {
+            list-style: none;
+        }
+    }
+}
+
+.header-top {
+    border-bottom: 1px solid #e5e8ed;
+    padding: 8px 0;
+}
+
+.header-top--menu {
+    font-family: $heading-font;
+
+    ul.menu {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            list-style: none;
+
+            a {
+                font-size: .9em;
+            }
+
+            &:nth-child(2) {
+                margin-left: auto;
+            }
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+
+            &.upcoming-item {
+
+                .__tag {
+                    display: inline-block;
+                    padding: 4px;
+                    background: #348fff;
+                    color: #FFF;
+                    line-height: normal;
+                    font-size: .8em;
+                    font-weight: normal;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
