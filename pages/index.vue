@@ -11,7 +11,7 @@
 					</a-col>
 					<a-col :md="12" :sm="24">
 						<div class="entry-contact-form">
-							<EContactform title="Let’s talk about everything!" sub-title="Ask us anything or just say hi…" />
+							<EContactform title="Let’s talk about everything!" sub-title="Ask us anything or just say hi..." />
 						</div>
 					</a-col>
 				</a-row>
