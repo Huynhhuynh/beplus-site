@@ -8,12 +8,12 @@
                 <li><nuxt-link :to="localePath('/products')">{{ $t('links.products') }}</nuxt-link></li>
                 <li><nuxt-link :to="localePath('/blog')">{{ $t('links.blog') }}</nuxt-link></li>
                 <li><nuxt-link :to="localePath('/pricing')">{{ $t('links.pricing') }}</nuxt-link></li>
-                <li v-if="this.$i18n.locale !== 'vi'">
+                <!-- <li v-if="this.$i18n.locale !== 'vi'">
                     <nuxt-link :to="switchLocalePath('vi')">{{ $t('locales.vi') }}</nuxt-link>
                 </li>
                 <li v-if="this.$i18n.locale !== 'en'">
                     <nuxt-link :to="switchLocalePath('en')">{{ $t('locales.en') }}</nuxt-link>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </div>

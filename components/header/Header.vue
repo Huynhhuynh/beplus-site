@@ -30,8 +30,13 @@
                 <Navigation />
                 <div class="site-tools">
                     <ul>
-                        <li>
+                        <li class="register-button">
                             <nuxt-link to="register" class="button">{{ $t('register') }}</nuxt-link>
+                        </li>
+                        <li class="menu-mobile-button">
+                            <span class="button-menu-offcanvas-toggle" @click="open_offcanvas_menu">
+                                <svg x="0px" y="0px" viewBox="0 0 341.333 341.333" xml:space="preserve"> <g> <g> <g> <rect x="128" y="128" width="85.333" height="85.333"/> <rect x="0" y="0" width="85.333" height="85.333"/> <rect x="128" y="256" width="85.333" height="85.333"/> <rect x="0" y="128" width="85.333" height="85.333"/> <rect x="0" y="256" width="85.333" height="85.333"/> <rect x="256" y="0" width="85.333" height="85.333"/> <rect x="128" y="0" width="85.333" height="85.333"/> <rect x="256" y="128" width="85.333" height="85.333"/> <rect x="256" y="256" width="85.333" height="85.333"/> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -48,6 +53,11 @@ export default {
     components: {
        Brand,
        Navigation
+    },
+    methods: {
+        open_offcanvas_menu () {
+            this.$store.commit( 'body_add_class', '__is-offcanvas-menu-actived' )
+        }
     }
 }
 </script>

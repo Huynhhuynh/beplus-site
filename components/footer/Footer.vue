@@ -19,7 +19,7 @@
                     <div class="footer-block-item">
                         <h4 class="f-title">Company</h4>
                         <ul>
-                            <li v-for="footer_com_nav in footer_company_navs">
+                            <li v-for="footer_com_nav in footer_company_navs" :key="footer_com_nav.title">
                                 <a :href="footer_com_nav.url">{{ footer_com_nav.title }}</a>
                             </li>
                         </ul>
@@ -29,7 +29,7 @@
                     <div class="footer-block-item">
                         <h4 class="f-title">Products</h4>
                         <ul>
-                            <li v-for="footer_product_nav in footer_product_navs">
+                            <li v-for="footer_product_nav in footer_product_navs" :key="footer_product_nav.title">
                                 <a :href="footer_product_nav.url">{{ footer_product_nav.title }}</a>
                             </li>
                         </ul>
@@ -81,10 +81,13 @@
                 </a-row>
             </div>
         </div>
+        <OffcanvasMenu />
     </footer>
 </template>
 
 <script>
+import OffcanvasMenu from '~/components/header/OffcanvasMenu.vue'
+
 export default {
     data() {
         return {
@@ -108,6 +111,9 @@ export default {
             ],
             form: this.$form.createForm(this, { name: 'newsletter' }),
         }
-    }
+    },
+    components: {
+        OffcanvasMenu
+    },
 }
 </script>

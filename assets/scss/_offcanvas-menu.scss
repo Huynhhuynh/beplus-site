@@ -1,0 +1,103 @@
+.offcanvas-menu-content {
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(1,1,1,.5);
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+
+    .offcanvas-inner {
+        width: 400px;
+        max-width: 100%;
+        background: #FFF;
+        height: 100vh;
+        padding: 16px;
+        box-sizing: border-box;
+        overflow: auto;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        opacity: 0;
+        transition: .5s ease;
+        -webkit-transition: .5s ease;
+
+        .__close {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 16px;
+            border-bottom: solid 1px #eee;
+            margin-bottom: 16px;
+
+            .icon-close {
+                width: 30px;
+                line-height: 0;
+                margin-right: 6px;
+            }
+        }
+
+        .mobile-menu {
+            border-bottom: solid 1px #eee;
+            padding-bottom: 16px;
+            margin-bottom: 25px;
+
+            ul.menu {
+
+                li {
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+
+                    a {
+                        font-size: 1.3em;
+                        line-height: 2.5em;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        &:after {
+                            content: "";
+                            width: 10px;
+                            height: 20px;
+                            position: relative;
+                            background: url('~assets/images/keyboard-right-arrow-button.svg') no-repeat center center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+
+        .offcanvas-widget {
+            
+            .wg-title {
+                color: #222;
+            }
+
+            a.button {
+                color: #FFF;
+            }
+        }
+    }
+}
+
+body.__is-offcanvas-menu-actived {
+
+    .offcanvas-menu-content {
+        visibility: visible;
+        opacity: 1;
+
+        .offcanvas-inner {
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

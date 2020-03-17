@@ -10,7 +10,9 @@
             </article>
 
             <div class="comments">
-                <vue-disqus shortname="http-159-89-196-91"></vue-disqus>
+                <div class="comments-inner">
+                    <vue-disqus shortname="http-159-89-196-91"></vue-disqus>
+                </div>
             </div>
         </div>
     </div>
