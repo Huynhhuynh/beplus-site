@@ -19,27 +19,42 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { gql } from 'graphql-request'
 
 export default {
-    async asyncData ( {params} ) {
-        
-        var result = await axios( {
-            method: 'post',
-            url: `http://159.89.196.91:8686/api/collections/get/post`,
-            headers: { 'Cockpit-Token': 'account-98e2e93440557872026df4a4a6ab36' },
-            data: {
-                filter: { 
-                    published: true,
-                    title_slug: params.slug,
-                },
-                limit: 1,
-            },
-        } )
+    async asyncData ( { $graphql, params } ) {
+        const slug = params.slug
 
-        return {
-            data: result.data.entries[0],
+        const query = gql`
+        query MyPosts {
+            posts {
+                edges {
+                node {
+                    id
+                    title
+                    excerpt
+                    slug
+                    featuredImage {
+                    node {
+                        sourceUrl(size: LARGE)
+                    }
+                    }
+                    tags {
+                    edges {
+                        node {
+                        name
+                        }
+                    }
+                    }
+                    date
+                }
+                }
+            }
         }
+        `;
+        
+        const posts = await $graphql.request( query );
+        return { data }
     },
     head () {
         return {
