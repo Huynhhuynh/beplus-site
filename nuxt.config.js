@@ -49,7 +49,7 @@ module.exports = {
 	/*
 	** Nuxt.js modules
 	*/
-	modules: [
+	modules: [ 
 		['nuxt-i18n', {
 		locales: [
 			{
@@ -67,9 +67,16 @@ module.exports = {
 		loadLanguagesAsync: true,
 		langDir: 'locales/',
 		defaultLocale: 'en',
-		}],
+		} ],
 		'@nuxtjs/markdownit',
+		'nuxt-graphql-request',
 	],
+	graphql: {
+    endpoint: 'http://159.89.194.38:8080/graphql',
+    options: {},
+    useFetchPolyfill: true,
+    includeNodeModules: true,
+  },
 	markdownit: {
 		html: true,
 		breaks: true,
