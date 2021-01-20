@@ -21,7 +21,7 @@
 		<ESection class="ss-client-brand">
 			<div class="site-container">
 				<ul>
-					<li v-for="client_item in  client_logos">
+					<li v-for="client_item in  client_logos" :key="client_item">
 						<img :src="client_item" alt="#">
 					</li>
 				</ul>
@@ -32,7 +32,7 @@
 			<div class="site-container">
 				<h3 class="ss-title">{{ $t('featured_services') }}</h3>
 				<ul class="list-featured">
-					<li class="featured-item" v-for="featured_item in featureds">
+					<li class="featured-item" v-for="featured_item in featureds" :key="featured_item">
 						<EFeatured :name="featured_item.name" :icon="featured_item.icon_svg">{{ featured_item.content }}</EFeatured>
 					</li>
 				</ul>
@@ -53,7 +53,7 @@
 					<a-col :md="16" :sm="24">
 						<div class="product-showcase-images">
 							<a-carousel autoplay effect="fade">
-								<div v-for="s_img in showcase_images">
+								<div v-for="s_img in showcase_images" :key="s_img">
 									<img :src="s_img" />
 								</div>
 							</a-carousel>
@@ -67,7 +67,7 @@
 			<div class="site-container">
 				<h3 class="ss-title">{{ $t('heading_blog_ss') }}</h3>
 				<div class="featured-posts-2-cols">
-					<div class="post-item" v-for="(post_item, index) in featured_posts">
+					<div class="post-item" v-for="(post_item, index) in featured_posts" :key="index">
 						<div class="post-item-inner">
 							<div class="post-thumb">
 								<a :href="post_item.link">
@@ -96,7 +96,7 @@
 			<div class="testimonial-carousel-content">
 				<no-ssr> <!-- important to add no-ssr-->
 					<OwlCarousel :items="3" :loop="true" :margin="30" :center="true" :autoplay="true" :stagePadding="100" :nav="false" :dots="false" :autoplayHoverPause="true" :responsive="owl_carouse_responsive">
-						<div class="item testimonial-carousel-item" v-for="testimonial_item in testimonials">
+						<div class="item testimonial-carousel-item" v-for="testimonial_item in testimonials" :key="testimonial_item">
 							<div class="testimonial-item-inner">
 								<div class="info">
 									<div class="client-avatar">
