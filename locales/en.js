@@ -8,6 +8,7 @@ export default {
         "services": "Services",
         "about": "About Us",
         "products": "Products",
+        "portfolio": "Portfolio",
         "blog": "Blog",
         "pricing": "Pricing"
     },

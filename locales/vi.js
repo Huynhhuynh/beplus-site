@@ -8,6 +8,7 @@ export default {
         "services": "Dịch Vụ",
         "about": "Giới Thiệu",
         "products": "Sản Phẩm",
+        "portfolio": "Portfolio",
         "blog": "Blog",
         "pricing": "Gói Dịch Vụ"
     },

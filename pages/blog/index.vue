@@ -4,18 +4,18 @@
       <div class="post-list" v-if="entries">
         <div class="post-item" v-for="p in entries" :key="p.id">
             <h2 class="post-title">
-                <nuxt-link :to="{ name: 'blog-slug___en', params: { slug: p.slug } }">{{ p.title }}</nuxt-link>
+              <nuxt-link :to="{ name: 'blog-slug___en', params: { slug: p.slug } }">{{ p.title }}</nuxt-link>
             </h2>
             <div class="post-metas">
-                <div class="post-created">{{ p.date }}</div>
-                <div class="post-tag" v-if="p._tags">in {{ p._tags.join( ', ' ) }}</div>
+              <div class="post-created">{{ p.date }}</div>
+              <div class="post-tag" v-if="p._tags">in {{ p._tags.join( ', ' ) }}</div>
             </div>
             <div class="post-excerpt" v-html="p.excerpt"></div>
             <nuxt-link :to="{ name: 'blog-slug___en', params: { slug: p.slug } }" class="read-more" append>
-                Read more
-                <span class="arrow-icon">
-                    <svg x="0px" y="0px" viewBox="0 0 476.213 476.213" xml:space="preserve"> <polygon points="345.606,107.5 324.394,128.713 418.787,223.107 0,223.107 0,253.107 418.787,253.107 324.394,347.5 345.606,368.713 476.213,238.106 "/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
-                </span>
+              Read more
+              <span class="arrow-icon">
+                <svg x="0px" y="0px" viewBox="0 0 476.213 476.213" xml:space="preserve"> <polygon points="345.606,107.5 324.394,128.713 418.787,223.107 0,223.107 0,253.107 418.787,253.107 324.394,347.5 345.606,368.713 476.213,238.106 "/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
+              </span>
             </nuxt-link>
         </div>
       </div>
@@ -56,8 +56,8 @@ export default {
     }
     `;
     
-    const posts = await $graphql.request( query );
-    return { posts: posts[ 'posts' ][ 'edges' ] };
+    const posts = await $graphql.request( query )
+    return { posts: posts[ 'posts' ][ 'edges' ] }
   },
   computed: {
     entries () {
@@ -72,6 +72,11 @@ export default {
           
           return post
       } )
+    }
+  },
+  head () {
+    return {
+      title: `Beplus Blog`,
     }
   }
 }
