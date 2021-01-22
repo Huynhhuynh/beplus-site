@@ -206,7 +206,7 @@
         .post-entry {
 
             .post-title {
-                font-size: 1.4em;
+                font-size: 1.3em;
             }
 
             .post-excerpt {
@@ -369,9 +369,9 @@
         }
 
         .message{
-            font-family: 'Caveat', cursive;
-            font-size: 1.5em;
-            line-height: 1.3em;
+            // font-family: 'Caveat', cursive;
+            // font-size: 1.5em;
+            // line-height: 1.3em;
             color: #222;
             margin-bottom: 10px;
         }
@@ -379,6 +379,33 @@
         .rating-star {
             font-size: .9em;
             letter-spacing: 10px;
+        }
+    }
+}
+
+.zigzag-list-block {
+
+    .service-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6em;
+
+        .service-image,
+        .service-entry {  
+            width: 45%;
+        }
+
+        .service-image {
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        &:nth-child( even ) {
+            flex-direction: row-reverse;
         }
     }
 }
