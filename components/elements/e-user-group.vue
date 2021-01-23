@@ -21,6 +21,9 @@ export default {
     _users () { 
       return this.users
     },
+  },
+  methods: {
+    
   }
 }
 </script>
@@ -45,7 +48,7 @@ export default {
           width: 100%;
           line-height: 0;
           border-radius: 50px;
-          border: solid 1px;
+          border: solid 2px;
           padding: 2px;
           background: white;
 

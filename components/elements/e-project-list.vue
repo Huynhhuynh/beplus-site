@@ -53,6 +53,7 @@ export default {
   .project-list-block {
 
     .project-item {
+      margin-bottom: 6vw;
 
       .project-thumb {
 
