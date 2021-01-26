@@ -1,7 +1,7 @@
 <template>
-  <div class="product-archive-container">
+  <div class="projects-archive-container">
     <div class="space-medium"></div>
-    <ESection class="ss-products">
+    <ESection class="ss-projects">
       <div class="site-container">
         <EProjectList v-if="_projects" :projects="_projects" />
       </div>
@@ -66,8 +66,7 @@ export default {
           hasPreviousPage
         }
       }
-    }
-`
+    }`
 
     const projects = await $graphql.request( query )
     return { projects: projects[ 'projects' ][ 'nodes' ] }

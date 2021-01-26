@@ -1,0 +1,39 @@
+.project-detail {
+
+  .tag-list,
+  .project-site,
+  .date-start, 
+  .build-width {
+    text-transform: uppercase;
+    font-size: .7em;
+    letter-spacing: 1px;
+  }
+
+  .project-site,
+  .date-start, 
+  .build-width {
+    display: flex;
+    flex-wrap: wrap;
+
+    span._label {
+      width: 120px;
+      min-width: 120px;
+      font-weight: bold;
+      color: black;
+    }
+
+    span._value {
+      margin-left: 6px;
+
+      a {
+        text-decoration: none;
+        border-bottom: solid 1px;
+      }
+    }
+  }
+
+  .participants {
+    margin-top: 20px;
+    display: inline-block;
+  }
+}

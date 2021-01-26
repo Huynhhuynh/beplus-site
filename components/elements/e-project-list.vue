@@ -10,11 +10,11 @@
           </div>
         </a-col>
         <a-col :span=12>
-          <div class="project-entry">
+          <div class="project-detail">
             <div class="tag-list" v-if="project._tags">{{ project._tags.join( ', ' ) }}</div>
-            <h3>
+            <h4>
               <nuxt-link :to="'/portfolio/' + project.slug">{{ project.title }}</nuxt-link>
-            </h3>
+            </h4>
             <p v-html="project.content"></p>
             <div class="project-site">
               <span class="_label">Website</span>: 
@@ -69,44 +69,5 @@ export default {
       }
     }
 
-    .project-entry {
-
-      .tag-list,
-      .project-site,
-      .date-start, 
-      .build-width {
-        text-transform: uppercase;
-        font-size: 11px;
-        letter-spacing: 1px;
-      }
-
-      .project-site,
-      .date-start, 
-      .build-width {
-        display: flex;
-        flex-wrap: wrap;
-
-        span._label {
-          width: 150px;
-          min-width: 150px;
-          font-weight: bold;
-          color: black;
-        }
-
-        span._value {
-          margin-left: 6px;
-
-          a {
-            text-decoration: none;
-            border-bottom: solid 1px;
-          }
-        }
-      }
-
-      .participants {
-        margin-top: 20px;
-        display: inline-block;
-      }
-    }
   }
 </style>
