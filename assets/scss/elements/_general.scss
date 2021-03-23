@@ -395,12 +395,20 @@
         .service-image,
         .service-entry {  
             width: 45%;
+
+            @media(max-width: 625px) {
+                width: 100%;
+            }
         }
 
         .service-image {
             
             img {
                 width: 100%;
+            }
+
+            @media(max-width: 625px) {
+                margin-bottom: 20px;
             }
         }
 

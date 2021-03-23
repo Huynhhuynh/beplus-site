@@ -2,14 +2,14 @@
   <div class="project-list-block">
     <div class="project-item" v-for="( project ) in projects" :key="project.databaseId">
       <a-row :gutter=60 type="flex" align="middle">
-        <a-col :span=12>
+        <a-col :md="{ span: 12 }" :sm="{ span: 24 }">
           <div class="project-thumb">
             <nuxt-link :to="'/portfolio/' + project.slug">
               <img :src="project._featuredImage.mediaItemUrl" :alt="project._featuredImage.altText">
             </nuxt-link>
           </div>
         </a-col>
-        <a-col :span=12>
+        <a-col :md="{ span: 12 }" :sm="{ span: 24 }">
           <div class="project-detail">
             <div class="tag-list" v-if="project._tags">{{ project._tags.join( ', ' ) }}</div>
             <h4>
@@ -66,6 +66,10 @@ export default {
             border-radius: 3px;
           }
         }
+      }
+
+      .project-detail {
+        margin: 25px 0
       }
     }
 
