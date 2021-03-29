@@ -12,10 +12,7 @@ module.exports = {
 			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Varela+Round&display=swap&subset=vietnamese' },
-			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Caveat&display=swap' },
-			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap' },
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		]
 	},
 	/*
