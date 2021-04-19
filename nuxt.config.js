@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 module.exports = {
 	mode: 'universal',
@@ -17,6 +18,9 @@ module.exports = {
 			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Caveat&display=swap' },
 			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap' },
 		]
+	},
+	env: {
+		ENDPOINT_API: process.env.ENDPOINT_API
 	},
 	/*
 	** Customize the progress-bar color
@@ -72,7 +76,7 @@ module.exports = {
 		'nuxt-graphql-request',
 	],
 	graphql: {
-    endpoint: 'http://159.89.194.38:8080/graphql',
+    endpoint: process.env.ENDPOINT_API,
     options: {},
     useFetchPolyfill: true,
     includeNodeModules: true,

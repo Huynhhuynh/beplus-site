@@ -101,13 +101,12 @@ export default {
             footer_product_navs: [
                 {title: 'Alone Nonprofit & Charity WP Theme', url: ''},
                 {title: 'Asata Digital & Marketing Agency WP Theme', url: ''},
-                {title: 'DonateWP WP Plugin', url: ''},
                 {title: 'Lemon Spa & Beauty WP Theme', url: ''},
                 {title: 'Ametex Digital Marketing & Seo WP Theme', url: ''},
                 {title: 'Educlever Education WP Theme', url: ''},
-                {title: 'Jayla WooCommerce, Shop WP Theme', url: ''},
-                {title: 'Dana Corporate Business WP Theme', url: ''},
-                {title: 'Excitor Business Consulting WP Theme', url: ''},
+                // {title: 'Jayla WooCommerce, Shop WP Theme', url: ''},
+                // {title: 'Dana Corporate Business WP Theme', url: ''},
+                // {title: 'Excitor Business Consulting WP Theme', url: ''},
             ],
             form: this.$form.createForm(this, { name: 'newsletter' }),
         }

@@ -22,7 +22,7 @@
       <div class="space-medium"></div>
     </div>
 
-    <ESection class="ss-services" padding="40px 0 10px" background-color="#eee" style="margin: 0;">
+    <ESection class="ss-services" padding="40px 0 10px" background-color="#eee" style="margin: 0 0 45px;">
       <div class="site-container">
         <h3 class="ss-title">{{ $t('featured_services') }}</h3>
         <ul class="list-featured">
@@ -32,15 +32,26 @@
         </ul>
       </div>
     </ESection>
+
+    <ETeam :members="members" />
   </div>
 </template>
 
 <script>
 import ESection from '~/components/elements/e-section.vue'
 import EFeatured from '~/components/elements/e-featured.vue' 
+import ETeam from '~/components/elements/e-team.vue'
+
+import { GetMembers } from '~/lib/api'
 
 export default {
-  components: { ESection, EFeatured },
+  components: { ESection, EFeatured, ETeam },
+  async asyncData( { params, $http } ) {
+    const members = await GetMembers()
+    return {
+      members
+    }
+  },
   data: () => {
     return {
       welcome_text: 'Hi there! Who we are & what we do 🌵',
